@@ -1,5 +1,3 @@
-<img width="647" height="637" alt="Screenshot 2026-06-13 154504" src="https://github.com/user-attachments/assets/d979e7bb-a6ce-42b9-81a5-5daf67562a3c" /># notionwidget
-code to create image carousel widget inside Notion
 <!DOCTYPE html>
 <html lang="en">
 <head>
