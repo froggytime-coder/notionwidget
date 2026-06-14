@@ -88,13 +88,16 @@ button {
 <div class="carousel">
     <div class="slides" id="slides">
         <div class="slide">
-            <img src="https://drive.google.com/uc?export=download&id=1OtWUx-BdsYK8ApEIUzvBM2itsh6z2giP" alt="">
+            <img src="https://drive.google.com/uc?id=1OtWUx-BdsYK8ApEIUzvBM2itsh6z2giP
+" alt="">
         </div>
         <div class="slide">
-            <img src="https://drive.google.com/uc?export=download&id=126jNEgjbycX65jTXRdZ6JIEecWrxKlGG" alt="">
+            <img src="https://drive.google.com/uc?id=126jNEgjbycX65jTXRdZ6JIEecWrxKlGG
+" alt="">
         </div>
         <div class="slide">
-            <img src="https://drive.google.com/uc?export=download&id=1_-QO7-60GyhGpLVjDednjnRxD7_xxm4G" alt="">
+            <img src="https://drive.google.com/uc?id=1_-QO7-60GyhGpLVjDednjnRxD7_xxm4G
+" alt="">
         </div>
     </div>
 
@@ -136,7 +139,6 @@ function goToSlide(index) {
     updateCarousel();
 }
 
-// Auto-advance every 5 seconds
 setInterval(() => {
     currentSlide = (currentSlide + 1) % totalSlides;
     updateCarousel();
