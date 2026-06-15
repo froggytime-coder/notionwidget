@@ -119,6 +119,14 @@ button:hover {
         <div class="slide">
             <img src="image (3).png" alt="Photo 3">
         </div>
+        
+        <div class="slide">
+            <img src="bhagavad-gita-wallpapaers-libro_grande.jpg" alt="Photo 4">
+        </div>
+
+        <div class="slide">
+            <img src="thumbnail_IMG_5388.jpg" alt="Photo 5">
+        </div>
 
     </div>
 
