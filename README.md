@@ -30,9 +30,15 @@ body {
 
 .slide {
     min-width: 80%;
-    margin: 0 10px;
-    height: 100%;
-    flex-shrink: 0;
+    margin: 0 15px;
+    opacity: 0.6;
+    transform: scale(0.9);
+    transition: all 0.4s ease;
+}
+
+.slide active {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .slide img {
@@ -109,7 +115,7 @@ button {
 
 <script>
 const slides = document.getElementById('slides');
-const totalSlides = document.querySelectorAll('.slide').length;
+const totalSlides = document.querySelectorAll('').length;
 const dotsContainer = document.getElementById('dots');
 
 let currentSlide = 0;
@@ -122,7 +128,12 @@ for (let i = 0; i < totalSlides; i++) {
 }
 
 function updateCarousel() {
-    slides.style.transform = `translateX(calc(-${currentSlide * 82}% + 10%))`;
+    slides.style.transform =
+        `translateX(calc(-${currentSlide * 83}% + 8.5%))`;
+
+    document.querySelectorAll('.slide').forEach((slide, index) => {
+        slide.classList.toggle('active', index === currentSlide);
+    });
 
     document.querySelectorAll('.dot').forEach((dot, index) => {
         dot.classList.toggle('active', index === currentSlide);
