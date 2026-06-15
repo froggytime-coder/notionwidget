@@ -88,8 +88,7 @@ button {
 <div class="carousel">
     <div class="slides" id="slides">
         <div class="slide">
-            <img src="https://drive.google.com/uc?id=1OtWUx-BdsYK8ApEIUzvBM2itsh6z2giP
-" alt="">
+            <img src="thumbnail_IMG_5388.jpg" alt="">
         </div>
         <div class="slide">
             <img src="https://drive.google.com/uc?id=126jNEgjbycX65jTXRdZ6JIEecWrxKlGG
