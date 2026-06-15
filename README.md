@@ -121,7 +121,7 @@ button:hover {
         </div>
         
         <div class="slide">
-            <img src="bhagavad-gita-wallpapaers-libro_grande.jpg" alt="Photo 4">
+            <img src="bhagavad-gita-wallpapers-libro_grande.jpg" alt="Photo 4">
         </div>
 
         <div class="slide">
