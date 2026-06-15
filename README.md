@@ -17,7 +17,8 @@ body {
     position: relative;
     width: 100%;
     max-width: 1000px;
-    overflow: hidden;
+    min-height: 750px;
+    overflow: visible;
     margin: auto;
 }
 
