@@ -135,6 +135,38 @@ button:hover {
             <img src="thumbnail_IMG_5388.jpg" alt="Photo 5">
         </div>
 
+         <div class="slide">
+            <img src="buddhacat.png" alt="Photo 6">
+        </div>
+
+         <div class="slide">
+            <img src="dancingfrogs.png" alt="Photo 7">
+        </div>
+
+         <div class="slide">
+            <img src="love.png" alt="Photo 8">
+        </div>
+
+         <div class="slide">
+            <img src="monkey.png" alt="Photo 9">
+        </div>
+
+         <div class="slide">
+            <img src="moonjelly.png" alt="Photo 10">
+        </div>
+
+         <div class="slide">
+            <img src="spreadlove.png" alt="Photo 11">
+        </div>
+
+         <div class="slide">
+            <img src="tropichouse.png" alt="Photo 12">
+        </div>
+
+         <div class="slide">
+            <img src="twocats.png" alt="Photo 13">
+        </div>
+
     </div>
 
     <button class="prev" onclick="changeSlide(-1)">‹</button>
