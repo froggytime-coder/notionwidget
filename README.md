@@ -55,18 +55,28 @@ button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+
+    width: 48px;
+    height: 48px;
+
     border: none;
-    background: rgba(0,0,0,0.5);
-    color: white;
-    font-size: 24px;
-    padding: 12px;
-    cursor: pointer;
     border-radius: 50%;
+
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+
     z-index: 10;
 }
 
 button:hover {
-    background: rgba(0,0,0,0.7);
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-50%) scale(1.08);
 }
 
 .prev {
