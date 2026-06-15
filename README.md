@@ -167,6 +167,18 @@ button:hover {
             <img src="twocats.png" alt="Photo 13">
         </div>
 
+          <div class="slide">
+            <img src="chicago.jpg" alt="Photo 14">
+        </div>
+
+          <div class="slide">
+            <img src="gardens.jpg" alt="Photo 15">
+        </div>
+
+          <div class="slide">
+            <img src="totoro.jpg" alt="Photo 16">
+        </div>
+
     </div>
 
     <button class="prev" onclick="changeSlide(-1)">‹</button>
