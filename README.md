@@ -94,8 +94,7 @@ button {
             <img src="bhagavad-gita-wallpapers-libro_grande.jpg" alt="">
         </div>
         <div class="slide">
-            <img src="https://drive.google.com/uc?id=1_-QO7-60GyhGpLVjDednjnRxD7_xxm4G
-" alt="">
+            <img src="curiousgeorge.jpg" alt="">
         </div>
     </div>
 
