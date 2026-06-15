@@ -56,27 +56,21 @@ button {
     top: 50%;
     transform: translateY(-50%);
 
-    width: 48px;
-    height: 48px;
-
     border: none;
-    border-radius: 50%;
-
-    background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(8px);
+    background: none;
 
     color: white;
-    font-size: 22px;
+    font-size: 42px;
+    font-weight: 300;
+
     cursor: pointer;
 
-    transition: all 0.25s ease;
-
+    transition: opacity 0.25s ease;
     z-index: 10;
 }
 
 button:hover {
-    background: rgba(255,255,255,0.25);
-    transform: translateY(-50%) scale(1.08);
+    opacity: 0.7;
 }
 
 .prev {
