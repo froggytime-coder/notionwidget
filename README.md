@@ -17,7 +17,6 @@ body {
     position: relative;
     width: 100%;
     max-width: 1000px;
-    aspect-ratio: 4 / 3;
     overflow: hidden;
     margin: auto;
 }
@@ -45,7 +44,7 @@ body {
 
 .slide img {
     width: 100%;
-    height: 100%;
+    height: 600px;
     object-fit: contain;
     border-radius: 12px;
     display: block;
