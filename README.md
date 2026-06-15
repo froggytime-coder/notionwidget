@@ -16,7 +16,7 @@ body {
     position: relative;
     width: 100%;
     max-width: 1100px;
-    aspect-ratio: 1.85 / 1;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 12px;
 }
