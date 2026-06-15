@@ -26,13 +26,12 @@ body {
     display: flex;
     align-items: center;
     transition: transform 0.5s ease;
-    height: 100%;
 }
 
 .slide {
-    min-width: 80%;
-    margin: 0 10px;
-    flex-shrink: 0;
+    flex: 0 0 80%;
+    box-sizing: border-box;
+    padding: 0 10px;
 }
 
 .slide.active {
