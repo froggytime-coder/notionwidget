@@ -24,8 +24,9 @@ body {
 
 .slides {
     display: flex;
-    transition: transform 0.5s ease;
     align-items: center;
+    transition: transform 0.5s ease;
+    will-change: transform;
 }
 
 .slide {
@@ -146,6 +147,7 @@ let currentSlide = 0;
 // Create dots
 for (let i = 0; i < totalSlides; i++) {
     const dot = document.createElement('span');
+
     dot.classList.add('dot');
 
     dot.addEventListener('click', () => {
@@ -158,10 +160,19 @@ for (let i = 0; i < totalSlides; i++) {
 
 function updateCarousel() {
 
-    const step = 80;
+    const slide = slideElements[currentSlide];
+
+    const carouselWidth =
+        document.querySelector('.carousel').offsetWidth;
+
+    const slideCenter =
+        slide.offsetLeft + (slide.offsetWidth / 2);
+
+    const translateAmount =
+        slideCenter - (carouselWidth / 2);
 
     slidesContainer.style.transform =
-        `translateX(calc(-${currentSlide * step}% + ${(100 - step) / 2}%))`;
+        `translateX(-${translateAmount}px)`;
 
     slideElements.forEach((slide, index) => {
         slide.classList.toggle('active', index === currentSlide);
@@ -173,19 +184,25 @@ function updateCarousel() {
 }
 
 function changeSlide(direction) {
+
     currentSlide =
         (currentSlide + direction + totalSlides) % totalSlides;
 
     updateCarousel();
 }
 
-// Auto-advance every 5 seconds
+// Auto advance
 setInterval(() => {
+
     currentSlide =
         (currentSlide + 1) % totalSlides;
 
     updateCarousel();
+
 }, 5000);
+
+// Re-center on window resize
+window.addEventListener('resize', updateCarousel);
 
 updateCarousel();
 </script>
