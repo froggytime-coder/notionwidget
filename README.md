@@ -29,6 +29,7 @@ body {
 
 .slide {
 <<<<<<< HEAD
+<<<<<<< HEAD
     min-width: 80%;
     margin: 0 15px;
     opacity: 0.6;
@@ -39,6 +40,10 @@ body {
 .slide active {
     opacity: 1;
     transform: scale(1);
+=======
+    min-width: 100%;
+    height: 100%;
+>>>>>>> parent of 9831455 (creating image previews)
 =======
     min-width: 100%;
     height: 100%;
@@ -133,12 +138,16 @@ for (let i = 0; i < totalSlides; i++) {
 
 function updateCarousel() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     slides.style.transform =
         `translateX(calc(-${currentSlide * 83}% + 8.5%))`;
 
     document.querySelectorAll('.slide').forEach((slide, index) => {
         slide.classList.toggle('active', index === currentSlide);
     });
+=======
+    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+>>>>>>> parent of 9831455 (creating image previews)
 =======
     slides.style.transform = `translateX(-${currentSlide * 100}%)`;
 >>>>>>> parent of 9831455 (creating image previews)
