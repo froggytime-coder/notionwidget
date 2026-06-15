@@ -31,12 +31,8 @@ body {
 
 .slide {
     min-width: 80%;
-    margin: 0 15px;
-    height: 100%;
+    margin: 0 10px;
     flex-shrink: 0;
-    opacity: 0.6;
-    transform: scale(0.9);
-    transition: all 0.4s ease;
 }
 
 .slide.active {
@@ -159,7 +155,7 @@ for (let i = 0; i < totalSlides; i++) {
 function updateCarousel() {
 
     slidesContainer.style.transform =
-        `translateX(calc(-${currentSlide * 83}% + 8.5%))`;
+    `translateX(-${currentSlide * 80}%)`;
 
     slideElements.forEach((slide, index) => {
         slide.classList.toggle('active', index === currentSlide);
