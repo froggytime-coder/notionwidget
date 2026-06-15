@@ -29,10 +29,12 @@ body {
 }
 
 .slide {
-    flex: 0 0 auto;
-    width: 80%;
+    flex: 0 0 80%;
     box-sizing: border-box;
     padding: 0 10px;
+    opacity: 0.4;
+    transform: scale(0.92);
+    transition: 0.4s ease;
 }
 
 .slide.active {
@@ -145,19 +147,21 @@ let currentSlide = 0;
 for (let i = 0; i < totalSlides; i++) {
     const dot = document.createElement('span');
     dot.classList.add('dot');
+
     dot.addEventListener('click', () => {
         currentSlide = i;
         updateCarousel();
     });
+
     dotsContainer.appendChild(dot);
 }
 
 function updateCarousel() {
 
-   const slideWidth = slideElements[0].offsetWidth;
+    const step = 80;
 
-slidesContainer.style.transform =
-    `translateX(-${currentSlide * slideWidth}px)`;
+    slidesContainer.style.transform =
+        `translateX(calc(-${currentSlide * step}% + ${(100 - step) / 2}%))`;
 
     slideElements.forEach((slide, index) => {
         slide.classList.toggle('active', index === currentSlide);
@@ -171,12 +175,15 @@ slidesContainer.style.transform =
 function changeSlide(direction) {
     currentSlide =
         (currentSlide + direction + totalSlides) % totalSlides;
+
     updateCarousel();
 }
 
 // Auto-advance every 5 seconds
 setInterval(() => {
-    currentSlide = (currentSlide + 1) % totalSlides;
+    currentSlide =
+        (currentSlide + 1) % totalSlides;
+
     updateCarousel();
 }, 5000);
 
