@@ -91,8 +91,7 @@ button {
             <img src="thumbnail_IMG_5388.jpg" alt="">
         </div>
         <div class="slide">
-            <img src="https://drive.google.com/uc?id=126jNEgjbycX65jTXRdZ6JIEecWrxKlGG
-" alt="">
+            <img src="bhagavad-gita-wallpapers-libro_grande.jpg" alt="">
         </div>
         <div class="slide">
             <img src="https://drive.google.com/uc?id=1_-QO7-60GyhGpLVjDednjnRxD7_xxm4G
