@@ -56,17 +56,21 @@ button {
     top: 50%;
     transform: translateY(-50%);
 
+    background: transparent;
     border: none;
-    background: none;
+    padding: 0;
+    margin: 0;
 
     color: white;
-    font-size: 42px;
-    font-weight: 300;
+    font-size: 60px;
+    line-height: 1;
 
     cursor: pointer;
 
-    transition: opacity 0.25s ease;
     z-index: 10;
+
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 button:hover {
@@ -133,8 +137,8 @@ button:hover {
 
     </div>
 
-    <button class="prev" onclick="changeSlide(-1)">❮</button>
-    <button class="next" onclick="changeSlide(1)">❯</button>
+    <button class="prev" onclick="changeSlide(-1)">‹</button>
+    <button class="next" onclick="changeSlide(1)">›</button>
 
     <div class="dots" id="dots"></div>
 
