@@ -24,12 +24,13 @@ body {
 
 .slides {
     display: flex;
-    align-items: center;
     transition: transform 0.5s ease;
+    align-items: center;
 }
 
 .slide {
-    flex: 0 0 80%;
+    flex: 0 0 auto;
+    width: 80%;
     box-sizing: border-box;
     padding: 0 10px;
 }
@@ -153,8 +154,10 @@ for (let i = 0; i < totalSlides; i++) {
 
 function updateCarousel() {
 
-    slidesContainer.style.transform =
-    `translateX(-${currentSlide * 80}%)`;
+   const slideWidth = slideElements[0].offsetWidth;
+
+slidesContainer.style.transform =
+    `translateX(-${currentSlide * slideWidth}px)`;
 
     slideElements.forEach((slide, index) => {
         slide.classList.toggle('active', index === currentSlide);
