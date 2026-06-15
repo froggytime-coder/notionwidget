@@ -8,6 +8,7 @@
 <style>
 body {
     margin: 0;
+    padding: 20px;
     font-family: Arial, sans-serif;
     background: transparent;
 }
@@ -15,45 +16,40 @@ body {
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 800px;
-    aspect-ratio: 16 / 9;
+    max-width: 1000px;
+    aspect-ratio: 4 / 3;
     overflow: hidden;
-    border-radius: 12px;
+    margin: auto;
 }
 
 .slides {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    align-items: center;
+    transition: transform 0.5s ease;
     height: 100%;
 }
 
 .slide {
-<<<<<<< HEAD
-<<<<<<< HEAD
     min-width: 80%;
     margin: 0 15px;
+    height: 100%;
+    flex-shrink: 0;
     opacity: 0.6;
     transform: scale(0.9);
     transition: all 0.4s ease;
 }
 
-.slide active {
+.slide.active {
     opacity: 1;
     transform: scale(1);
-=======
-    min-width: 100%;
-    height: 100%;
->>>>>>> parent of 9831455 (creating image previews)
-=======
-    min-width: 100%;
-    height: 100%;
->>>>>>> parent of 9831455 (creating image previews)
 }
 
 .slide img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    border-radius: 12px;
+    display: block;
 }
 
 button {
@@ -68,6 +64,10 @@ button {
     cursor: pointer;
     border-radius: 50%;
     z-index: 10;
+}
+
+button:hover {
+    background: rgba(0,0,0,0.7);
 }
 
 .prev {
@@ -93,6 +93,7 @@ button {
     border-radius: 50%;
     background: rgba(255,255,255,0.5);
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .dot.active {
@@ -104,53 +105,57 @@ button {
 <body>
 
 <div class="carousel">
+
     <div class="slides" id="slides">
+
         <div class="slide">
-            <img src="thumbnail_IMG_5388.jpg" alt="">
+            <img src="curiousgeorge.jpg" alt="Photo 1">
         </div>
+
         <div class="slide">
-            <img src="bhagavad-gita-wallpapers-libro_grande.jpg" alt="">
+            <img src="image (1).png" alt="Photo 2">
         </div>
+
         <div class="slide">
-            <img src="curiousgeorge.jpg" alt="">
+            <img src="image (3).png" alt="Photo 3">
         </div>
+
     </div>
 
     <button class="prev" onclick="changeSlide(-1)">❮</button>
     <button class="next" onclick="changeSlide(1)">❯</button>
 
     <div class="dots" id="dots"></div>
+
 </div>
 
 <script>
-const slides = document.getElementById('slides');
-const totalSlides = document.querySelectorAll('').length;
+const slidesContainer = document.getElementById('slides');
+const slideElements = document.querySelectorAll('.slide');
 const dotsContainer = document.getElementById('dots');
 
+const totalSlides = slideElements.length;
 let currentSlide = 0;
 
+// Create dots
 for (let i = 0; i < totalSlides; i++) {
     const dot = document.createElement('span');
     dot.classList.add('dot');
-    dot.addEventListener('click', () => goToSlide(i));
+    dot.addEventListener('click', () => {
+        currentSlide = i;
+        updateCarousel();
+    });
     dotsContainer.appendChild(dot);
 }
 
 function updateCarousel() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    slides.style.transform =
+
+    slidesContainer.style.transform =
         `translateX(calc(-${currentSlide * 83}% + 8.5%))`;
 
-    document.querySelectorAll('.slide').forEach((slide, index) => {
+    slideElements.forEach((slide, index) => {
         slide.classList.toggle('active', index === currentSlide);
     });
-=======
-    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
->>>>>>> parent of 9831455 (creating image previews)
-=======
-    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
->>>>>>> parent of 9831455 (creating image previews)
 
     document.querySelectorAll('.dot').forEach((dot, index) => {
         dot.classList.toggle('active', index === currentSlide);
@@ -158,15 +163,12 @@ function updateCarousel() {
 }
 
 function changeSlide(direction) {
-    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    currentSlide =
+        (currentSlide + direction + totalSlides) % totalSlides;
     updateCarousel();
 }
 
-function goToSlide(index) {
-    currentSlide = index;
-    updateCarousel();
-}
-
+// Auto-advance every 5 seconds
 setInterval(() => {
     currentSlide = (currentSlide + 1) % totalSlides;
     updateCarousel();
