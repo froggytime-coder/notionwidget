@@ -15,7 +15,7 @@ body {
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 1100px;
+    max-width: 800px;
     aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 12px;
