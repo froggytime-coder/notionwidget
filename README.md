@@ -23,13 +23,16 @@ body {
 
 .slides {
     display: flex;
+    align-items: center;
     transition: transform 0.5s ease-in-out;
     height: 100%;
 }
 
 .slide {
-    min-width: 100%;
+    min-width: 80%;
+    margin: 0 10px;
     height: 100%;
+    flex-shrink: 0;
 }
 
 .slide img {
@@ -119,7 +122,7 @@ for (let i = 0; i < totalSlides; i++) {
 }
 
 function updateCarousel() {
-    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    slides.style.transform = `translateX(calc(-${currentSlide * 82}% + 10%))`;
 
     document.querySelectorAll('.dot').forEach((dot, index) => {
         dot.classList.toggle('active', index === currentSlide);
